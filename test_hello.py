@@ -6,6 +6,15 @@ class TestHello(unittest.TestCase):
     def test_hello(self):
         self.assertEqual(hello.hello(), "Hello, world!")
 
+    def test_add(self):
+        self.assertEqual(hello.add(6, 7), 13)
+
+    def test_sub(self):
+        self.assertEqual(hello.sub(6, 7), -1)
+
+    def test_mul(self):
+        self.assertEqual(hello.mul(6, 7), 42)
+
     # def test_sin(self):
     #     self.assertEqual(hello.sin(0), 0)
     #     self.assertEqual(hello.sin(1), 0.8414709848078965)
