@@ -5,6 +5,7 @@ import hello
 class TestHello(unittest.TestCase):
     def test_hello(self):
         self.assertEqual(hello.hello(), "Hello, world!")
+        self.assertNotEqual(hello.hello(), "bye, world!")
 
     def test_add(self):
         self.assertEqual(hello.add(6, 7), 13)
