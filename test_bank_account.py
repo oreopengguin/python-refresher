@@ -12,7 +12,10 @@ class TestBankAccount(unittest.TestCase):
         self.assertAlmostEqual(self.EricAcnt.balance, 50)
         self.assertNotAlmostEqual(self.EricAcnt.balance, 49)
         self.assertEqual(self.EricAcnt.withdraw(-100000.00), False)
+        self.assertAlmostEqual(self.EricAcnt.balance, 50)
         self.assertEqual(self.EricAcnt.withdraw("meow"), False)
+        self.assertAlmostEqual(self.EricAcnt.balance, 50)
+
         """
         with self.assertRaises(TypeError):
             self.EricAcnt.withdraw(-1000000.00)
@@ -29,7 +32,9 @@ class TestBankAccount(unittest.TestCase):
         self.assertAlmostEqual(self.IsaAcnt.balance, 8.22)
         self.assertNotAlmostEqual(self.IsaAcnt.balance, 8.21)
         self.assertEqual(self.IsaAcnt.deposit(-1000), False)
+        self.assertAlmostEqual(self.IsaAcnt.balance, 8.22)
         self.assertEqual(self.IsaAcnt.deposit("meow"), False)
+        self.assertAlmostEqual(self.IsaAcnt.balance, 8.22)
         # with self.assertRaises(TypeError):
         #     self.IsaAcnt.deposit(-1000)
         # with self.assertRaises(TypeError):

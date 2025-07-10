@@ -6,8 +6,7 @@ def hello():
 
 
 def add(a, b):
-    # return a + b
-    return 13
+    return a + b
 
 
 def sub(a, b):
